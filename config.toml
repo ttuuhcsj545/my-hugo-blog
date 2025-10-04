@@ -1,0 +1,4 @@
+baseURL = "https://blog.lnova.top/"
+languageCode = "zh-cn"
+title = "Tian Zhihao's blog"
+theme = "PaperMod"
