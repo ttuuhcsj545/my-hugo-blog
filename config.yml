@@ -1,7 +1,7 @@
 # 如果你的站点使用 'https'，请确保你的 baseURL 不是 'http'，
 # 否则你的站点地图 (sitemap) 将包含 http 链接（而不是 https），这会影响 Google 对你的 URL 索引。
 baseURL: "https://merry-cocada-67b780.netlify.app/"
-title: Tian Zhihao's blog
+title: Tian Zhihao
 theme: PaperMod
 
 defaultContentLanguage: zh-cn # 设置默认内容语言为中文
@@ -27,7 +27,7 @@ languages:
   # --- 中文配置块 (作为默认语言) ---
   zh-cn:
     languageName: "中文" # 在语言切换器中显示的名称
-    title: "Tian Zhihao's blog" # 如果需要与英文不同的标题
+    title: "Tian Zhihao" # 如果需要与英文不同的标题
     weight: 1 # 设置最小权重，作为默认语言
     menu:
       main:
