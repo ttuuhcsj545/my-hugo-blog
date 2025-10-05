@@ -71,8 +71,8 @@ outputs:
 
 params:
   env: production # 启用谷歌分析、opengraph、twitter-cards 和 schema 所需
-  description: "主题 PaperMod - https://github.com/adityatelange/hugo-PaperMod"
-  author: PaperMod 主题
+  description: "田志浩的个人技术博客，分享编程、前端、AI 等学习心得和生活记录"
+  author: Tian Zhihao
   # author: ["我", "你"] # 多个作者
 
   defaultTheme: auto # 默认主题：auto (跟随系统), dark, light
@@ -117,9 +117,17 @@ params:
     - name: github
       title: 在 Github 上查看源码
       url: "https://github.com/adityatelange/hugo-PaperMod"
+      
+    - name: bilibili 
+      title: 关注我的 B站 
+      url: "https://space.bilibili.com/3546643999754673"
 
+    - name: mail 
+      title: 给我发送邮件 
+      url: "mailto:zhihaotian31@gmail.com"
+  
   editPost:
-    URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
+    URL: "https://github.com/ttuuhcsj545/my-hugo-blog/tree/exampleSite/content"
     Text: "建议修改" # 编辑链接的文本
     appendFilePath: true # 是否在编辑链接后附加文件路径
 
