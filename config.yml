@@ -5,6 +5,7 @@ title: PaperMod
 copyright: "© [PaperMod Contributors](https://github.com/adityatelange/hugo-PaperMod/graphs/contributors)"
 theme: PaperMod
 
+defaultContentLanguage: zh-cn # 添加这行
 enableInlineShortcodes: true
 enableRobotsTXT: true
 buildDrafts: false
@@ -23,6 +24,23 @@ pagination:
   pagerSize: 5
 
 languages:
+
+
+  zh-cn:
+    languageName: "中文" # 在切换器中显示的名称
+    title: "我的中文博客" # 如果需要与英文不同的标题
+    weight: 4 # 确保这个权重能让它出现在语言列表中的合适位置
+    menu:
+      main:
+        - name: 归档
+          url: archives
+          weight: 5
+        - name: 搜索
+          url: search/
+          weight: 10
+        - name: 标签
+          url: tags/
+          weight: 15
   en:
     languageName: "English"
     weight: 1
