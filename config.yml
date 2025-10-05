@@ -1,8 +1,7 @@
 # 如果你的站点使用 'https'，请确保你的 baseURL 不是 'http'，
 # 否则你的站点地图 (sitemap) 将包含 http 链接（而不是 https），这会影响 Google 对你的 URL 索引。
 baseURL: "https://merry-cocada-67b780.netlify.app/"
-title: PaperMod
-copyright: "© [PaperMod 贡献者](https://github.com/adityatelange/hugo-PaperMod/graphs/contributors)"
+title: Tian Zhihao's blog
 theme: PaperMod
 
 defaultContentLanguage: zh-cn # 设置默认内容语言为中文
@@ -28,7 +27,7 @@ languages:
   # --- 中文配置块 (作为默认语言) ---
   zh-cn:
     languageName: "中文" # 在语言切换器中显示的名称
-    title: "我的中文博客" # 如果需要与英文不同的标题
+    title: "Tian Zhihao's blog" # 如果需要与英文不同的标题
     weight: 1 # 设置最小权重，作为默认语言
     menu:
       main:
@@ -107,29 +106,18 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "PaperMod 演示"
+    Title: "Tian Zhihao's blog"
     Content: >
-      👋 欢迎来到 Hugo PaperMod 主题的演示页面！
+      👋 欢迎来到Tian Zhihao 的个人博客
 
-      - **PaperMod** 主题设计简洁、快速且响应灵敏，并具有增强用户体验的实用功能集。
+      - 分享我在编程、前端、后端、AI 技术等方面的学习心得，也记录一些生活趣事和成长过程。
 
-      - 请随时在 GitHub 上给我们一个星🌟表示支持，并分享给你的朋友和社交媒体。
-
-      - PaperMod 基于 [Paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3) 主题。
+      - 希望这个小站能帮到和我一样热爱技术的人。
 
   socialIcons:
     - name: github
       title: 在 Github 上查看源码
       url: "https://github.com/adityatelange/hugo-PaperMod"
-    - name: Discord
-      title: 加入 Discord 社区
-      url: "https://discord.gg/ahpmTvhVmp"
-    - name: X
-      title: 在 X/Twitter 分享 PaperMod
-      url: "https://x.com/intent/tweet/?text=Checkout%20Hugo%20PaperMod%20%E2%9C%A8%0AA%20fast,%20clean,%20responsive%20Hugo%20theme.&url=https://github.com/adityatelange/hugo-PaperMod&hashtags=Hugo,PaperMod"
-    - name: KoFi
-      title: 请我喝杯 Ko-Fi 吧 :)
-      url: "https://ko-fi.com/adityatelange"
 
   editPost:
     URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
