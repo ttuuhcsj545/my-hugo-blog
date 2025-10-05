@@ -143,7 +143,7 @@ params:
 
   assets:
     disableHLJS: true # 禁用 Highlight.js
-  #     favicon: "<link / 绝对路径>"
+        favicon: "<link /favicon.ico>"
   #     favicon16x16: "<link / 绝对路径>"
   #     favicon32x32: "<link / 绝对路径>"
   #     apple_touch_icon: "<link / 绝对路径>"
