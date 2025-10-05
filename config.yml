@@ -60,8 +60,7 @@ languages:
         - name: Tags
           url: tags/
           weight: 10
-        - name: WiKi
-          url: https://github.com/adityatelange/hugo-PaperMod/wiki/
+
 
 
 outputs:
@@ -106,7 +105,7 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "Tian Zhihao's blog"
+    Title: "Tian Zhihao"
     Content: >
       👋 欢迎来到Tian Zhihao 的个人博客
 
