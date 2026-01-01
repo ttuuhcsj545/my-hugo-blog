@@ -1,7 +1,7 @@
 # 如果你的站点使用 'https'，请确保你的 baseURL 不是 'http'，
 # 否则你的站点地图 (sitemap) 将包含 http 链接（而不是 https），这会影响 Google 对你的 URL 索引。
 baseURL: "https://blog.lnova.top/"
-title: Tian Zhihao1
+title: Tian Zhihao112
 theme: PaperMod
 
 defaultContentLanguage: zh-cn # 设置默认内容语言为中文
