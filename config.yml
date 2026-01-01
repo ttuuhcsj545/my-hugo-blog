@@ -29,7 +29,7 @@ languages:
   # --- 中文配置块 (作为默认语言) ---
   zh-cn:
     languageName: "中文" # 在语言切换器中显示的名称
-    title: "Tian Zhihao123" # 如果需要与英文不同的标题
+    title: "Tian Zhihao-田志浩的个人技术博客，分享编程、前端、AI 等学习心得和生活记录" # 如果需要与英文不同的标题
     weight: 1 # 设置最小权重，作为默认语言
     menu:
       main:
