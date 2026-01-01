@@ -21,7 +21,9 @@ minify:
 pagination:
   disableAliases: false
   pagerSize: 5 # 每页显示的文章数量
-
+  
+defaultContentLanguage: zh-cn
+defaultContentLanguageInSubdir: false # 关键：确保中文路径不带 /zh-cn/
 languages:
 
   # --- 中文配置块 (作为默认语言) ---
@@ -41,25 +43,6 @@ languages:
           url: tags/
           weight: 15
 
-  # --- 英文配置块 ---
-  en:
-    languageName: "English"
-    weight: 2 # 权重次于中文
-    taxonomies:
-      category: categories
-      tag: tags
-      series: series
-    menu:
-      main:
-        - name: Archive
-          url: archives
-          weight: 5
-        - name: Search
-          url: search/
-          weight: 10
-        - name: Tags
-          url: tags/
-          weight: 10
 
 
 
