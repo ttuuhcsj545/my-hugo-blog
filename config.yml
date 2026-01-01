@@ -3,7 +3,7 @@
 baseURL: "https://blog.lnova.top/"
 title: Tian Zhihao
 theme: PaperMod
-title1: "Tian Zhihao-田志浩的个人技术博客，分享编程、前端、AI 等学习心得和生活记录" # 如果需要与英文不同的标题
+
 defaultContentLanguage: zh-cn # 设置默认内容语言为中文
 enableInlineShortcodes: true
 enableRobotsTXT: true
@@ -53,6 +53,7 @@ outputs:
     - JSON
 
 params:
+  Title1: "Tian Zhihao-田志浩的个人技术博客，分享编程、前端、AI 等学习心得和生活记录" # 如果需要与英文不同的标题
   env: production # 启用谷歌分析、opengraph、twitter-cards 和 schema 所需
   description: "田志浩的个人技术博客，分享编程、前端、AI 等学习心得和生活记录"
   author: Tian Zhihao
