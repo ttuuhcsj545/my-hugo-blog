@@ -21,13 +21,15 @@ minify:
 pagination:
   disableAliases: false
   pagerSize: 5 # 每页显示的文章数量
-
+  
+defaultContentLanguage: zh-cn
+defaultContentLanguageInSubdir: false # 关键：确保中文路径不带 /zh-cn/
 languages:
 
   # --- 中文配置块 (作为默认语言) ---
   zh-cn:
     languageName: "中文" # 在语言切换器中显示的名称
-    title: "Tian Zhihao" # 如果需要与英文不同的标题
+    title: "Tian Zhihao"
     weight: 1 # 设置最小权重，作为默认语言
     menu:
       main:
@@ -41,25 +43,6 @@ languages:
           url: tags/
           weight: 15
 
-  # --- 英文配置块 ---
-  en:
-    languageName: "English"
-    weight: 2 # 权重次于中文
-    taxonomies:
-      category: categories
-      tag: tags
-      series: series
-    menu:
-      main:
-        - name: Archive
-          url: archives
-          weight: 5
-        - name: Search
-          url: search/
-          weight: 10
-        - name: Tags
-          url: tags/
-          weight: 10
 
 
 
@@ -70,6 +53,7 @@ outputs:
     - JSON
 
 params:
+  Title1: "Tian Zhihao-田志浩的个人技术博客，分享编程、前端、AI 等学习心得和生活记录" # 如果需要与英文不同的标题
   env: production # 启用谷歌分析、opengraph、twitter-cards 和 schema 所需
   description: "田志浩的个人技术博客，分享编程、前端、AI 等学习心得和生活记录"
   author: Tian Zhihao
