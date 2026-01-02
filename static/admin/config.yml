@@ -1,4 +1,4 @@
-# Use DecapBridge PKCE auth (required)
+# 1. 后端配置 (保留你现在的 DecapBridge 设置)
 backend:
   name: git-gateway
   repo: ttuuhcsj545/my-hugo-blog
@@ -8,8 +8,6 @@ backend:
   auth_endpoint: /sites/781d21db-f792-478c-bb25-a3cbf2f532d4/pkce
   auth_token_endpoint: /sites/781d21db-f792-478c-bb25-a3cbf2f532d4/token
   gateway_url: https://gateway.decapbridge.com
-
-  # See who did what (optional)
   commit_messages:
     create: Create {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
     update: Update {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
@@ -18,15 +16,33 @@ backend:
     deleteMedia: Delete “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
     openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
 
-# Enable PKCE fields (optional, recommended)
+# 2. 授权相关 (保留)
 auth:
   email_claim: email
   first_name_claim: first_name
   last_name_claim: last_name
   avatar_url_claim: avatar_url
 
-# Better Decap + Bridge logo (optional)
+# 3. 网站信息 (保留)
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
-
-# Add site links in Decap CMS (optional)
 site_url: https://blog.lnova.top
+
+# --- 以下是缺失的关键补全部分，必须添加 ---
+
+# 4. 媒体库配置 (解决必需属性 media_folder 报错)
+media_folder: "static/images" # 图片存放在仓库的位置
+public_folder: "/images"      # 网页引用的路径
+
+# 5. 文章集合配置 (解决必需属性 collections 报错)
+collections:
+  - name: "blog"
+    label: "我的博客文章"
+    folder: "content/posts"   # 你的 Markdown 文件存放路径
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "发布日期", name: "date", widget: "datetime" }
+      - { label: "正文", name: "body", widget: "markdown" }
+      - { label: "描述", name: "description", widget: "string", required: false }
+      - { label: "标签", name: "tags", widget: "list", required: false }
