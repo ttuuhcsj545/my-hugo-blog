@@ -43,11 +43,16 @@
     </a>
     <sup class="archive-count">&nbsp;{{ len .Pages }}</sup>
   </h2>
-  {{- range .Pages.GroupByDate "January" }}
+  {{/* 核心修改1：把 January 改为 01，按数字月份分组 */}}
+  {{- range .Pages.GroupByDate "01" }}
   <div class="archive-month">
+    {{/* 核心修改2：新增 数字月份 → 中文月份 映射字典 */}}
+    {{- $monthMap := dict "01" "一月" "02" "二月" "03" "三月" "04" "四月" "05" "五月" "06" "六月" "07" "七月" "08" "八月" "09" "九月" "10" "十月" "11" "十一月" "12" "十二月" }}
+    {{/* 锚点ID不变，还是 年份-数字月份，不影响跳转 */}}
     <h3 class="archive-month-header" id="{{ $year }}-{{ .Key }}">
       <a class="archive-header-link" href="#{{ $year }}-{{ .Key }}">
-        {{- .Key -}}
+        {{/* 核心修改3：调用映射，显示中文月份 */}}
+        {{- index $monthMap .Key -}}
       </a>
       <sup class="archive-count">&nbsp;{{ len .Pages }}</sup>
     </h3>
