@@ -14,22 +14,6 @@
     display: flex;
 }
 
-.giscus {
-  position: relative;
-  min-height: 150px;               /* 预留空间，避免加载时页面跳动 */
-  background: #f7f7f7;            /* 加载时的背景色 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-}
-
-/* 加载中的提示文字 */
-.giscus::before {
-  content: "正在加载评论…";
-  color: #888;
-  font-size: 14px;
-}
 
 .pagination a {
     color: var(--theme);
