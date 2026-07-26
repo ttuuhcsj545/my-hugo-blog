@@ -61,7 +61,7 @@ params:
 
   defaultTheme: auto # 默认主题：auto (跟随系统), dark, light
   # disableThemeToggle: true # 禁用主题切换按钮
-  ShowShareButtons: true # 显示分享按钮
+  ShowShareButtons: false # 显示分享按钮
   ShowReadingTime: true # 显示阅读时间
   # disableSpecial1stPost: true # 禁用特殊的第一篇文章样式
   displayFullLangName: true # 显示完整的语言名称 (例如: Chinese)
