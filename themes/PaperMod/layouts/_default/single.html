@@ -51,6 +51,47 @@
     </ul>
     {{- if (.Param "comments") }}
     {{- partial "comments.html" . }}
+    <script>
+(function () {
+  function setGiscusTheme(theme) {
+    const iframe = document.querySelector('.giscus-frame');
+    if (iframe && iframe.contentWindow) {
+      iframe.contentWindow.postMessage(
+        { giscus: { setConfig: { theme } } },
+        'https://giscus.app'
+      );
+    }
+  }
+
+  // 只读取 pref-theme，light/dark 二选一
+  function getCurrentTheme() {
+    return localStorage.getItem('pref-theme') === 'dark' ? 'dark' : 'light';
+  }
+
+  // giscus 加载完成后首次同步
+  window.addEventListener('message', function (e) {
+    if (e.origin === 'https://giscus.app' && e.data?.giscus) {
+      setGiscusTheme(getCurrentTheme());
+    }
+  });
+
+  // 当 PaperMod 切换主题并修改 DOM 时，再次同步
+  const observer = new MutationObserver(function () {
+    setGiscusTheme(getCurrentTheme());
+  });
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['data-theme', 'class']
+  });
+
+  // 额外处理跨标签页同步（别的标签页改了 localStorage）
+  window.addEventListener('storage', function (e) {
+    if (e.key === 'pref-theme') {
+      setGiscusTheme(getCurrentTheme());
+    }
+  });
+})();
+</script>
     {{- if (.Param "ShowPostNavLinks") }}
     {{- partial "post_nav_links.html" . }}
     {{- end }}
