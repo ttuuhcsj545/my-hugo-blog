@@ -72,7 +72,7 @@ params:
   ShowAllPagesInArchive: true # 在归档页显示所有页面
   ShowPageNums: true # 显示页码
   ShowToc: true # 显示文章目录
-  # comments: false # 禁用评论
+  comments: true
   images: ["images/papermod-cover.png"] # 默认的社交媒体分享图片
 
   profileMode:
